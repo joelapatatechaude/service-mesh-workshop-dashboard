@@ -9,7 +9,7 @@ Istio provides [Kiali][1], an open source project that gives you a console view 
 Ensure Kiali can view your deployments:
 
 ```execute
-oc get cm kiali -n %username%-istio -o yaml | sed '/DeploymentConfig/d' | oc apply -n %username%-istio -f -
+oc get cm kiali -n %username%-istio -o yaml | sed '/DeploymentConfig/d' | oc apply -n %username%-istio -f -;
 oc rollout restart deployment kiali -n %username%-istio
 ```
 
